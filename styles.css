@@ -59,7 +59,11 @@
   background-color: rgb(var(--primary-color));
   color: rgb(255, 255, 255);
 }
-
+.bucket-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
 #title-input,
 #content-input {
   width: 100%;

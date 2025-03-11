@@ -1,4 +1,4 @@
-const LOCAL_STORAGE_KEY = "noteList";
+const LOCAL_STORAGE_KEY = "simpNotes_noteList";
 
 function saveNote(title, text, id) {
   const notes = getNotes();

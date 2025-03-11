@@ -26,7 +26,7 @@
               d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
             ></path>
           </svg>
-          ><span>Neue Notiz erstellen</span>
+          <span>Neue Notiz erstellen</span>
         </button>
         <div class="sidebar-list" id="sidebar-list"></div>
       </div>
@@ -35,9 +35,19 @@
           <div class="bucket-list">
             <div class="category selected-category">Alle</div>
             <div class="category">Private</div>
-            <div class="category">Beruflich</div>
+            <div class="category new-category">Neu</div>
           </div>
           <div class="bucket-menu">
+            <div class="category">Kategorie anlegen</div>
+            <div class="category">Kategorie löschen</div>
+          </div>
+        </div>   
+          <div class="content-header">
+            <input
+              type="text"
+              placeholder="Überschrift eingeben..."
+              id="title-input"
+            />
             <button class="save-note">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -70,18 +80,7 @@
                   ></path>
                 </svg>
               </button>
-
-          </div>
-        </div>
-       
-          <div class="content-header">
-            <input
-              type="text"
-              placeholder="Überschrift eingeben..."
-              id="title-input"
-            />
-            
-          </div>
+          </div>      
           <textarea
             id="content-input"
             placeholder="Fang an eine Notiz zu erstellen"
