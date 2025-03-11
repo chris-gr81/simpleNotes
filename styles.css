@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 
 * {
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 :root {
-  --font-family: "Poppins", sans-serif;
+  --font-family: "Jost", sans-serif;
   --primary-color: 76, 175, 80;
   --primary-color-rgb: rgb(var(--primary-color));
   --primary-color--hover: rgb(59, 139, 64);
@@ -22,6 +22,42 @@
 .content-container {
   padding: 1.5rem 1rem;
   width: 100%;
+}
+
+.bucket-container {
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bucket-list {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.category {
+  background-color: rgba(var(--primary-color), 0.1);
+  /* box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1); */
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: all 0.2 ease-in-out;
+  width: fit-content;
+  cursor: default;
+}
+
+.category:not(.selected-category) {
+  cursor: pointer;
+}
+
+.category:hover,
+.selected-category {
+  background-color: rgb(var(--primary-color));
+  color: rgb(255, 255, 255);
 }
 
 #title-input,
@@ -45,13 +81,14 @@
 #content-input {
   font-size: 1.5rem;
   resize: none;
-  height: 80vh;
+  height: 80%;
 }
 
 .content-header {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
+  margin-top: 1rem;
 }
 
 .sidebar {
@@ -117,6 +154,7 @@
   box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   transition: all 0.2 ease-in-out;
+  cursor: default;
 }
 
 .note-preview:not(.selected-note) {
