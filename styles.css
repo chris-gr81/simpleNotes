@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --primary-color: 76, 175, 80;
+  --primary-color-rgb: rgb(var(--primary-color));
+  --primary-color--hover: rgb(59, 139, 64);
+}
+
+.app-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  font-family: var(--font-family);
+}
+
+.content-container {
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+#title-input,
+#content-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: var(--font-family);
+}
+
+#title-input::placeholder,
+#content-input::placeholder {
+  color: gray;
+}
+
+#title-input {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+#content-input {
+  font-size: 1.5rem;
+  resize: none;
+  height: 80vh;
+}
+
+.content-header {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar {
+  border-right: 1px solid grey;
+  padding: 1.5rem;
+  width: 400px;
+  overflow: auto;
+}
+
+.create-new,
+.save-note,
+.delete-note {
+  color: white;
+  background-color: var(--primary-color-rgb);
+  border: none;
+  padding: 1.5rem 0;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  cursor: pointer;
+  transition: all 0.2 ease-in-out;
+}
+
+.create-new:hover,
+.save-note:hover,
+.delete-note:hover {
+  background-color: var(--primary-color--hover);
+}
+
+.create-new {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.create-new .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.save-note,
+.delete-note {
+  width: unset;
+  padding: 1rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.note-preview {
+  border-radius: 5px;
+  box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  transition: all 0.2 ease-in-out;
+}
+
+.note-preview:not(.selected-note) {
+  cursor: pointer;
+}
+
+.note-preview:hover,
+.selected-note {
+  background-color: rgba(var(--primary-color), 0.1);
+}
+
+.note-preview-header {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.note-preview-header,
+.note-preview-text {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.note-preview-text {
+  color: grey;
+}
+
+.note-preview-timestamp {
+  width: 100%;
+  text-align: right;
+  font-style: italic;
+  margin-top: 1rem;
+  color: grey;
+  font-size: 0.75rem;
+}
